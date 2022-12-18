@@ -2,7 +2,6 @@ import { useState } from "react";
 function List({ item, id, allTodo, setAllTodo }) {
   const [edit, setEdit] = useState(false);
   const [editedData, setEditedData] = useState("");
-
   const handleInput = (e) => {
     setEditedData(e.target.value);
   };
