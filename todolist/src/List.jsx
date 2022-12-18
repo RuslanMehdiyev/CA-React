@@ -50,7 +50,5 @@ function List({ item, id, allTodo, setAllTodo }) {
     </div>
   );
 }
-{
-}
 
 export default List;
