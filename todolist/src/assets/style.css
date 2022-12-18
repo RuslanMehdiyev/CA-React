@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  background-color: teal;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  gap: 20px;
+}
+.todo {
+  width: 50%;
+}
+.todo input {
+  width: 80%;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.todo button {
+  border: none;
+  padding: 10px;
+  width: 20%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 8px;
+  padding: 8px;
+}
+.list p {
+  font-size: 1.5rem;
+  width: 90%;
+}
+.list .liBtn {
+  width: 10%;
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.list .liBtn button {
+  font-size: 1.2rem;
+  padding: 0;
+  background-color: #fff;
+}
+.list input {
+  border: 1px solid red;
+}
