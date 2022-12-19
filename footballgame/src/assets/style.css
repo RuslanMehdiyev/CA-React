@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.App {
+  width: 1440px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.stadium {
+  position: relative;
+  margin-top: 8%;
+  width: 805px;
+  height: 425px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+}
+.goal {
+  width: 20px;
+  height: 200px;
+  border: 2px solid black;
+}
+.ball {
+  position: absolute;
+  left: 200px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+.score {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
