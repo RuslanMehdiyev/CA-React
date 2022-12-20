@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: rgb(54, 54, 54);
+}
+.App{
+    width: 1440px;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.login{
+    width: 40%;
+    min-height: 350px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color:beige;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.login input{
+    width: 80%;
+    padding: 10px;
+    border: none;
+}
+.login button{
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: darkblue;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.login button:hover{
+    background-color: blue;
+}
