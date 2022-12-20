@@ -39,7 +39,6 @@ function Stadium() {
       setPosition({ ...position, x: position.x + 20 });
     }
   };
-  console.log(position.x);
   return (
     <>
       <div className="score">
