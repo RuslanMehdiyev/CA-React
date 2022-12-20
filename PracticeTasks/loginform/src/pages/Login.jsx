@@ -1,24 +1,30 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import User from "./User";
 
 function Login() {
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
-  const [userObject, setUserObject] = useState({});
+  const [userObject, setUserObject] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
   const [check, setCheck] = useState(false);
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUserObject({
+      ...userObject,
+      [name]: value,
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!userName || !userEmail || !userPassword) {
+    if (!userObject.name && !userObject.email && !userObject.password) {
       alert("Please fill the data");
       return;
     }
-    setUserObject({
-      name: userName,
-      email: userEmail,
-      password: userPassword,
-    });
     setCheck(!check);
   };
 
@@ -32,21 +38,24 @@ function Login() {
           <form className="login" onSubmit={(e) => handleSubmit(e)}>
             <input
               type="text"
+              name="name"
               placeholder="Enter user name"
-              onChange={(e) => setUserName(e.target.value)}
-              value={userName}
+              onChange={handleChange}
+              value={userObject.name}
             />
             <input
               type="email"
+              name="email"
               placeholder="Enter user email"
-              onChange={(e) => setUserEmail(e.target.value)}
-              value={userEmail}
+              onChange={handleChange}
+              value={userObject.email}
             />
             <input
               type="password"
+              name="password"
               placeholder="Enter user password"
-              onChange={(e) => setUserPassword(e.target.value)}
-              value={userPassword}
+              onChange={handleChange}
+              value={userObject.password}
             />
             <button>Register</button>
           </form>
