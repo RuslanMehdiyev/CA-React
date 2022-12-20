@@ -20,19 +20,26 @@ function Stadium() {
       }
       setPosition({ ...position, y: position.y + 20 });
     } else if (e.key === "ArrowLeft") {
-      if (position.x === 20) {
+      if (position.x === 20 && position.y >= 120 && position.y <= 280) {
         setScore2(score2 + 1);
         setPosition({ y: (position.y = 200), x: (position.x = 400) });
       }
+      if (position.x === 0) {
+        return;
+      }
       setPosition({ ...position, x: position.x - 20 });
     } else if (e.key === "ArrowRight") {
-      if (position.x > 755) {
+      if (position.x > 755 && position.y >= 120 && position.y <= 280) {
         setScore1(score1 + 1);
         setPosition({ y: (position.y = 200), x: (position.x = 400) });
+      }
+      if (position.x === 780) {
+        return;
       }
       setPosition({ ...position, x: position.x + 20 });
     }
   };
+  console.log(position.x);
   return (
     <>
       <div className="score">
