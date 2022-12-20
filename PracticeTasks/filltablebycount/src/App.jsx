@@ -10,7 +10,6 @@ function App() {
     fetch("https://northwind.vercel.app/api/orders")
       .then((res) => res.json())
       .then((data) => setData(data));
-      console.log("Fetch Rendered");
   }, []);
 
   const handleClick = () => {
