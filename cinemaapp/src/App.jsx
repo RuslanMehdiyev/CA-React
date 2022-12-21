@@ -13,7 +13,7 @@ function App() {
   const [wish, SetWish] = useState([]);
 
   useEffect(() => {
-    fetch("http://www.omdbapi.com/?s=harry&apikey=129fb3f0")
+    fetch("https://www.omdbapi.com/?s=harry&apikey=129fb3f0")
       .then((res) => res.json())
       .then((data) => {
         setData(data.Search);
@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   const callFetch = () => {
-    fetch(`http://www.omdbapi.com/?s=${searchValue}&apikey=129fb3f0`)
+    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=129fb3f0`)
       .then((res) => res.json())
       .then((e) => {
         setData(e.Search);
