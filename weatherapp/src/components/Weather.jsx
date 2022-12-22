@@ -28,7 +28,7 @@ function Weather() {
         {data.error ? (
           <h1>Data not Found</h1>
         ) : isLoading ? (
-          <ClipLoader size={50} color="red" />
+          <ClipLoader size={50} color="green" />
         ) : (
           <>
             <div
