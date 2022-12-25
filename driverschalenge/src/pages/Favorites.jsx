@@ -56,7 +56,7 @@ function Favorites() {
           </tbody>
         </table>
       ) : (
-        "Favorites are Empty"
+        <h1 style={{marginTop:"2rem"}}>Favorites list is Empty</h1>
       )}
     </>
   );
